@@ -13,7 +13,7 @@ from sklearn.preprocessing import StandardScaler
 # 1. Load Dataset
 # =========================
 
-df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 
 # =========================

@@ -8,7 +8,7 @@ from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, roc_auc_score
 
 # Load data
-df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 # Clean data
 df = df.drop("customerID", axis=1)
@@ -79,11 +79,11 @@ metrics = {
 print(metrics)
 
 # Save files for Streamlit
-joblib.dump(model, "churn_model.pkl")
-joblib.dump(scaler, "scaler.pkl")
-joblib.dump(X.columns.tolist(), "model_columns.pkl")
-joblib.dump(metrics, "model_metrics.pkl")
+joblib.dump(model, "models/churn_model.pkl")
+joblib.dump(scaler, "models/scaler.pkl")
+joblib.dump(X.columns.tolist(), "models/model_columns.pkl")
+joblib.dump(metrics, "models/model_metrics.pkl")
 
-df.to_csv("cleaned_churn_data.csv", index=False)
+df.to_csv("data/cleaned_churn_data.csv", index=False)
 
 print("Model and files saved successfully.")

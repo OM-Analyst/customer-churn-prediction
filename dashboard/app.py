@@ -11,11 +11,11 @@ st.set_page_config(
 )
 
 # Load files
-model = joblib.load("churn_model.pkl")
-scaler = joblib.load("scaler.pkl")
-model_columns = joblib.load("model_columns.pkl")
-metrics = joblib.load("model_metrics.pkl")
-df = pd.read_csv("cleaned_churn_data.csv")
+model = joblib.load("models/churn_model.pkl")
+scaler = joblib.load("models/scaler.pkl")
+model_columns = joblib.load("models/model_columns.pkl")
+metrics = joblib.load("models/model_metrics.pkl")
+df = pd.read_csv("data/cleaned_churn_data.csv")
 
 numeric_cols = ["tenure", "MonthlyCharges", "TotalCharges", "AvgMonthlySpend"]
 

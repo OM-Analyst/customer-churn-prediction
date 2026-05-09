@@ -10,7 +10,7 @@ sns.set(style="whitegrid")
 
 # 2. Load Dataset
 
-df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 # View first rows
 print(df.head())
